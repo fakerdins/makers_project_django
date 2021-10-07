@@ -1,0 +1,54 @@
+1 создаем директорию проекта
+2 создаем venv
+3 создаем requirements.txt записываем нужные нам библиотеки
+4 активировать venv ( venv/bin/activate )
+5 установить в зависимости с requirements.txt ( install -r  requirements.txt )
+6 pycharm setting > project > нажимаем на шестеренку > existing enviroment > путь до нашего bin файла
+7 terminal: django-admin startproject shopApi .
+    python3 manage.py runserver
+    python3 manage.py runserver 8001 etc используется при ошибке
+8 запись таблиц базы данных: python3 manage.py migrations создает файлы для миграций
+                             python3 manage.py migrate применяет файлы миграции в базу данproных
+
+Queryset - запрос в базу данных
+
+all() -> select *
+
+product.objects.all() -> select * from product;
+
+product.objects.values() -> returns values as dictionary
+
+product.objects.values_list() -> returns values as list
+
+#! MVC -> 
+#? module 
+#? view(serializers) 
+#? controller(views)
+
+#  сериализаторы конвертируют json files into python
+
+REST -> архитектурный стиль написания API приложения
+
+1 модель: клиент - сервер
+
+2 единобразие интерфейса
+
+3 определение ресурсов(
+    URL  ('api/v1/product/id/')
+)
+
+ ->   djangorestframework  <-
+              
+CRUD -> POST, GET, PATCH, PUT 
+create -> Post()
+read -> GET
+update -> PATCH, PUT
+delete -> DELETE
+
+для авторизации используется аутенфикация:
+    1. Token(fdsfjwesjfw)
+    2. Session()
+    3. JWT(json web token) token(afjiwafifjkfaaw)
+    4. Base
+
+#! password: sayamin1234
